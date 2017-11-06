@@ -12,6 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require devise_bootstrap_views
-//= require_tree .
+//= require twitter/bootstrap 
+//= require_tree
