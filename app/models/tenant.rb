@@ -1,10 +1,14 @@
 class Tenant < ActiveRecord::Base
-  
-  validates_presence_of :name
-  validates_uniqueness_of :name
-
-   acts_as_universal_and_determines_tenant
-  has_many :members, dependent: :destroy
+     acts_as_universal_and_determines_tenant
+    has_many :projects, dependent: :destroy
+    has_many :members, dependent: :destroy
+    
+    def can_create_projects?
+      (plan == 'free' && projects.count < 1) || (plan == 'premium')
+    end
+    
+    validates_presence_of :name
+    validates_uniqueness_of :name
 
     def self.create_new_tenant(tenant_params, user_params, coupon_params)
 
@@ -45,6 +49,8 @@ class Tenant < ActiveRecord::Base
       Member.create_org_admin(user)
       #
     end
+    
+   
 
    
 end

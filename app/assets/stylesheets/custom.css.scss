@@ -107,7 +107,7 @@ padding-left: 15px;
 
 .jumbotron {
 
-background-image: asset-url('https://images.unsplash.com/photo-1493689485253-f07fcbfc731b?auto=format&fit=crop&w=733&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=750&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
 
 background-size: cover;
 
@@ -190,5 +190,21 @@ padding-left: 0 !important;
 .no-right-padding {
 
 padding-right: 0 !important;
+
+}
+
+.table tr td {
+
+a.main-link {
+
+color: #428bca;
+
+}
+
+a.main-link:hover {
+
+background: none;
+
+}
 
 }
