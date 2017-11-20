@@ -9,6 +9,8 @@ gem 'devise'
 
 gem 'milia'
 
+gem 'aws-sdk'
+
 gem 'twitter-bootstrap-rails'
 
 gem 'devise-bootstrap-views'
